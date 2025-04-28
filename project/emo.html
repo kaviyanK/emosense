@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" />
+    <title>EmoSense - Dashboard</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <div class="menu-toggle" onclick="toggleSidebar()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </div>
+            <h1>Emo<span>Sense</span></h1>
+        </div>
+        <div class="user-info">
+            <span>Dr. kavin</span>
+            <div class="user-avatar">J</div>
+        </div>
+    </div>
+    
+    <aside class="sidebar">
+        <!-- Sidebar content goes here -->
+    </aside>
+    
+    <div class="container">
+        <div class="dashboard-header">
+            <h2>Classroom Emotion Dashboard</h2>
+            <p>View real-time and historical emotion data from your classroom sessions</p>
+        </div>
+        
+        <div class="filters">
+            <div class="class-selector">
+                <select>
+                    <option value="class1">Computer Science 101</option>
+                    <option value="class2">Data Structures</option>
+                    <option value="class3">Machine Learning Basics</option>
+                </select>
+                <input type="date" value="2025-04-08">
+            </div>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Overall Engagement</h3>
+                <div class="stat-value">76%</div>
+                <div class="stat-change positive">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="18 15 12 9 6 15"></polyline>
+                    </svg>
+                    4.6% vs previous class
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <h3>Dominant Emotion</h3>
+                <div class="stat-value">Interest</div>
+                <div class="stat-change positive">Most common throughout session</div>
+            </div>
+            
+            <div class="stat-card">
+                <h3>Negative Emotions</h3>
+                <div class="stat-value">12%</div>
+                <div class="stat-change negative">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                    2.1% vs previous class
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <h3>Students Tracked</h3>
+                <div class="stat-value">27/28</div>
+                <div class="stat-change">96.4% detection rate</div>
+            </div>
+        </div>
+        
+        <div class="chart-grid">
+            <div class="chart-card">
+                <h3>Emotion Distribution</h3>
+                <div class="chart-placeholder">
+                    <div class="pie-chart"></div>
+                </div>
+                <div class="pie-legend">
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: #5e72e4;"></div>
+                        <span>Interest (40%)</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: #11cdef;"></div>
+                        <span>Neutral (25%)</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: #2dce89;"></div>
+                        <span>Happy (20%)</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: #ffd600;"></div>
+                        <span>Confused (10%)</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: #f5365c;"></div>
+                        <span>Bored (5%)</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chart-card">
+                <h3>Emotion Trends Over Time</h3>
+                <div class="chart-placeholder">
+                    <div class="bar-chart">
+                        <div class="bar" style="height: 80%;">
+                            <div class="bar-label">10:00</div>
+                        </div>
+                        <div class="bar" style="height: 60%;">
+                            <div class="bar-label">10:15</div>
+                        </div>
+                        <div class="bar" style="height: 90%;">
+                            <div class="bar-label">10:30</div>
+                        </div>
+                        <div class="bar" style="height: 75%;">
+                            <div class="bar-label">10:45</div>
+                        </div>
+                        <div class="bar" style="height: 65%;">
+                            <div class="bar-label">11:00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="table-container">
+            <h3>Session Analysis</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Topic</th>
+                        <th>Dominant Emotion</th>
+                        <th>Engagement Score</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>10:00 - 10:15</td>
+                        <td>Introduction</td>
+                        <td>Interest</td>
+                        <td>78%</td>
+                        <td>Strong start to class</td>
+                    </tr>
+                    <tr>
+                        <td>10:15 - 10:30</td>
+                        <td>Theoretical Concepts</td>
+                        <td>Neutral</td>
+                        <td>65%</td>
+                        <td>Consider more examples</td>
+                    </tr>
+                    <tr>
+                        <td>10:30 - 10:45</td>
+                        <td>Interactive Demo</td>
+                        <td>Interest</td>
+                        <td>92%</td>
+                        <td>Highest engagement point</td>
+                    </tr>
+                    <tr>
+                        <td>10:45 - 11:00</td>
+                        <td>Group Exercise</td>
+                        <td>Happy</td>
+                        <td>84%</td>
+                        <td>Positive collaboration</td>
+                    </tr>
+                    <tr>
+                        <td>11:00 - 11:15</td>
+                        <td>Technical Explanation</td>
+                        <td>Confused</td>
+                        <td>62%</td>
+                        <td>Revisit this concept next class</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script>
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
